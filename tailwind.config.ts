@@ -33,8 +33,8 @@ export default {
           "50%": { transform: "translateY(-20px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.5" },
+          "0%, 100%": { opacity: "1", filter: "brightness(1)" },
+          "50%": { opacity: "0.5", filter: "brightness(1.5)" },
         },
         "gradient-flow": {
           "0%": { backgroundPosition: "0% 50%" },

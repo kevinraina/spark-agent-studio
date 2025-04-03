@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Navigation } from "../components/Navigation";
 import { ParticlesBackground } from "../components/ParticlesBackground";
@@ -7,6 +6,8 @@ import { AgentBuilderPreview } from "../components/AgentBuilderPreview";
 import { DashboardPreview } from "../components/DashboardPreview";
 import { TemplateMarketplace } from "../components/TemplateMarketplace";
 import { Zap, MessageSquare, Cpu, Play } from "lucide-react";
+import { HeroSection } from "../components/HeroSection";
+import { FinalCTA } from "../components/FinalCTA";
 
 const Index = () => {
   return (
@@ -14,42 +15,9 @@ const Index = () => {
       <Navigation />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-hero-gradient opacity-50" />
-          <ParticlesBackground />
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative z-10 text-center px-4"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6"
-            >
-              <Zap className="w-10 h-10 text-primary animate-pulse-glow" />
-            </motion.div>
-            
-            <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 bg-accent-gradient bg-clip-text text-transparent">
-              Create AI Agents Without Code
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Turn your ideas into working AI in minutes. No technical knowledge required.
-            </p>
-            <motion.button 
-              className="px-8 py-4 rounded-full bg-accent-gradient text-white font-medium text-lg hover:opacity-90 transition-opacity"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Get Started
-            </motion.button>
-          </motion.div>
-        </section>
-
+        {/* Replace Hero Section with the new component */}
+        <HeroSection />
+        
         {/* Interactive Demo Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-hero-gradient opacity-30" />
@@ -243,52 +211,17 @@ const Index = () => {
         </section>
         
         {/* Final CTA Section */}
-        <section className="py-24 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-accent-gradient opacity-10" />
-          <ParticlesBackground />
-          
-          <div className="max-w-4xl mx-auto relative z-10 text-center">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="font-display text-4xl md:text-6xl mb-6"
-            >
-              Ready to Build Your AI Agent?
-            </motion.h2>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
-            >
-              Start creating your first AI agent in minutes. No coding required.
-            </motion.p>
-            
-            <motion.button 
-              className="px-8 py-4 rounded-full bg-accent-gradient text-white font-medium text-lg hover:opacity-90 transition-opacity"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Get Started Now
-            </motion.button>
-          </div>
-        </section>
+        <FinalCTA />
       </main>
       
-      <footer className="py-12 px-4 bg-black/30 backdrop-blur-sm">
+      <footer className="py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="flex items-center justify-center gap-2">
             <Zap className="w-6 h-6 text-primary" />
             <span className="font-display text-xl font-bold bg-accent-gradient text-transparent bg-clip-text">
               AgentFlux
             </span>
           </div>
-          
-          <p className="text-gray-400 text-sm">
-            © 2025 AgentFlux. All rights reserved.
-          </p>
         </div>
       </footer>
     </div>

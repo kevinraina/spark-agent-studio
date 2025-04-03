@@ -14,6 +14,9 @@ export default {
         accent: "#FFD700",
         "gradient-from": "#1A1F2C",
         "gradient-to": "#2D1B4E",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
       },
       fontFamily: {
         display: ["Space Grotesk", "sans-serif"],

@@ -2,13 +2,11 @@
 import { motion } from "framer-motion";
 import { Zap } from "lucide-react";
 import { GlowingButton } from "./ui/glowing-button";
-import { ParticlesBackground } from "./ParticlesBackground";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-hero-gradient opacity-50" />
-      <ParticlesBackground />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -22,7 +20,7 @@ export const HeroSection = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6"
         >
-          <Zap className="w-10 h-10 text-primary animate-pulse-glow" />
+          <Zap className="w-10 h-10 text-primary" />
         </motion.div>
         
         <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 bg-accent-gradient bg-clip-text text-transparent">

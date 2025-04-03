@@ -1,6 +1,4 @@
 
-import { Navigation } from "../components/Navigation";
-import { HeroSection } from "../components/HeroSection";
 import { FinalCTA } from "../components/FinalCTA";
 import { InteractiveDemoSection } from "../components/home/InteractiveDemoSection";
 import { HowItWorks } from "../components/home/HowItWorks";
@@ -9,11 +7,13 @@ import { VisualBuilderSection } from "../components/home/VisualBuilderSection";
 import { DashboardSection } from "../components/home/DashboardSection";
 import { TemplatesSection } from "../components/home/TemplatesSection";
 import { HomeFooter } from "../components/home/HomeFooter";
+import { HeroSection } from "../components/HeroSection";
+import { NavigationWithAuth } from "../components/NavigationWithAuth";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-body">
-      <Navigation />
+      <NavigationWithAuth />
       
       <main>
         <HeroSection />

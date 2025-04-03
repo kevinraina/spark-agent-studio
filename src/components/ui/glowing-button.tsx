@@ -1,5 +1,4 @@
 
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -34,26 +33,14 @@ export const GlowingButton = ({
   };
 
   const buttonClasses = cn(
-    "rounded-full font-medium relative group overflow-hidden transition-all duration-300",
+    "rounded-full font-medium relative transition-all duration-300",
     sizeClasses[size],
     variantClasses[variant],
     className
   );
 
   const ButtonContent = () => (
-    <>
-      <span className="relative z-10">{children}</span>
-      
-      {/* Inner glow effect on hover */}
-      <motion.div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10"
-        initial={false}
-        whileHover={{ scale: 1.5 }}
-      />
-      
-      {/* Outer glow effect */}
-      <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-secondary opacity-0 blur-md group-hover:opacity-70 transition-all duration-300 -z-10"></div>
-    </>
+    <span className="relative z-10">{children}</span>
   );
 
   if (to) {

@@ -1,12 +1,12 @@
 
 import { motion } from "framer-motion";
-import { Navigation } from "../components/Navigation";
 import { AgentBuilderPreview } from "../components/AgentBuilderPreview";
+import { NavigationWithAuth } from "../components/NavigationWithAuth";
 
 const Create = () => {
   return (
     <div className="min-h-screen bg-background font-body">
-      <Navigation />
+      <NavigationWithAuth />
       <main className="max-w-7xl mx-auto px-4 py-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

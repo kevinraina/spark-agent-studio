@@ -1,13 +1,11 @@
 
 import { motion } from "framer-motion";
-import { ParticlesBackground } from "../ParticlesBackground";
 import { InteractiveDemo } from "../InteractiveDemo";
 
 export const InteractiveDemoSection = () => {
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-hero-gradient opacity-30" />
-      <ParticlesBackground />
       
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2 
